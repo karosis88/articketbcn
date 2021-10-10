@@ -1,0 +1,402 @@
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('ffamily/ProximaNova-Light.eot');
+    src: url('ffamily/Proxima Nova Light'), url('ffamily/ProximaNova-Light'),
+        url('ffamily/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('ffamily/ProximaNova-Light.woff2') format('woff2'),
+        url('ffamily/ProximaNova-Light.woff') format('woff'),
+        url('ffamily/ProximaNova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('ffamily/ProximaNova-RegularIt.eot');
+    src: url('ffamily/Proxima Nova Regular'), url('ProximaNova-Regular'),
+        url('ffamily/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ffamily/ProximaNova-Regular.woff2') format('woff2'),
+        url('ffamily/ProximaNova-Regular.woff') format('woff'),
+        url('ffamily/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('ffamily/ProximaNova-Semibold.eot');
+    src: url('ffamily/Proxima Nova Semibold'), url('ProximaNova-Semibold'),
+        url('ffamily/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('ffamily/ProximaNova-Semibold.woff2') format('woff2'),
+        url('ffamily/ProximaNova-Semibold.woff') format('woff'),
+        url('ffamily/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 2%;
+    background-color: #FEF8F2;
+    cursor: url("cursor.svg") 23 26, auto;
+}
+
+html {
+}
+
+
+.bodytwo {
+    display: flex;
+}
+
+
+.mainbody {
+    width: 95%;
+    height: 100%;
+    margin-top: 2vh;
+}
+
+.leftbar, .rightbar {
+    width: 5%;
+    height: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;   
+    transform: rotate(-180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.leftbar {
+    top: 10vh;
+}
+
+.rightbar {
+    bottom: 10vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.wrapnav {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 2px;
+    padding-right: 3px;
+}
+
+.wrapnavitem {
+    position: relative;
+    text-align: left;
+    margin-right: calc(1vw * 2.34375);
+    font-size: calc(1vw * 8854166666666667 / 10000000000000000);
+    font-style: normal;
+    font-family: 'Proxima Nova Rg';
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: calc(1vw*0.1041666666666667);
+    padding-top: calc(1vw * 3125/10000);
+    padding-bottom: calc(1vw * 3125/10000 / 2);
+
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 2%;
+    box-sizing: border-box;
+}
+
+
+
+.logoimg {
+    width: calc(1vw * 8333333333333333/1000000000000000);
+    height: calc(1vw * 3125/1000);
+    min-width: 160px;
+    min-height: calc(6014px / 100);
+}
+
+.section1 {
+    display: none;
+    padding-top: calc(2.2vw * 5.052023121387283);
+}
+
+.sidebar {
+    font-family: 'Proxima Nova Rg';
+    position: fixed;
+    font-size: calc(1vw * 0.8463541666666667);
+    letter-spacing: 1.5px;
+    color: rgb(0, 0, 0);
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr; /* Вертикальный режим */
+    text-orientation: mixed;
+    height: 372.44px;
+    width: 17.6px;
+}
+
+
+
+.buyyourarticket {
+    border: 2px solid #e63338;
+    font-size: calc(1vw * 0.9375);
+    font-family: 'Proxima Nova Semibold';
+    position: relative;
+    left: 3px;
+    bottom: 1px;
+    padding: calc(1vw * 0.4166666666666667) calc(1vw * 0.8333333333333333) calc(1vw * 0.4166666666666667);
+    color: #e63338;
+    transition: color 100s ease;
+}
+
+.dflex {
+    display: flex;
+}
+
+.icon {
+    width: 0;
+    height: 0;
+    position: relative;
+    top: calc(1em * 0.1);
+    left: calc(1em * 0.2);
+    border-left: calc(1vw * 7/19.2) solid transparent;
+    border-right: calc(1vw * 7/19.2) solid transparent;
+    border-top: calc(1vw * 10/19.2) solid #e63338;
+}
+
+.forwaveanim {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    min-width: 212.6px;
+    left: 0;
+    top: 100%;
+    transition: 0.5s ease;
+}
+
+.triangles {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: calc(11.07287870900573 * 1vw / 4) solid transparent;
+    border-right: calc(11.07287870900573 * 1vw / 4) solid transparent;
+    border-bottom: calc(1vw * 1.5625) solid #e63338;
+    
+}
+
+
+.wavewater {
+    width: 100%;
+    height: calc(1vw * 2125/1000);
+    background-color: #e63338;
+}
+
+.buyartickettext {
+    transition: color 0.5s ease;
+}
+
+.articketcontainer {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.animwrapper {
+    position: absolute;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    right: 0;
+    bottom: 0;
+    top: -1px;
+    left: -1px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.triangleright {
+    border-left: calc(2083 / 1000 * 1vw) solid transparent;
+    border-right: calc(3.4375 * 1vw) solid transparent;
+}
+
+.triangleleft {
+    border-right: calc(2083 / 1000 * 1vw) solid transparent;
+    border-left: calc(3.4375 * 1vw) solid transparent;
+}
+
+
+/* .animwrapper:hover > .forwaveanim */
+.artickethover:hover > .animwrapper> .forwaveanim 
+{
+    top: calc(-1vw * 1.5625);
+    transition: top 0.55s ease;
+}
+
+.artickethover:hover > .articketcontainer > .buyartickettext 
+{
+    color: white;
+}
+
+
+.languagecontainer {
+    overflow: hidden;
+    position: absolute;
+    height: 0px;
+    opacity: 0%;
+    transition: opacity 0.3s , height .5s ease;
+}
+
+.langbetstext {
+    position: relative;
+}
+
+.sectionleft {
+    font-weight: 800;
+    font-size: 4.583333304vw;
+    letter-spacing: 1.249999992vw;
+    line-height: 1.15;
+    margin-bottom: 7.5%;
+}
+
+.wrapnavitem:hover::before, .langbetatext:hover::before {
+    content: '';
+    width: 100%;
+    height: calc(1vw / 19.2);
+    min-height: 2px;
+    background-color: #e63338;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+}
+
+.langbeta {
+    position: relative;
+    top: calc(1vw * 0.6315789473684211);
+}
+
+.langbetatext:hover::before {
+    top: 20px;
+}
+
+.left {
+    bottom: 4vh;
+    left: 1.5vw;
+}
+
+.right {
+    top: 21vh;
+    right: 21.5px;
+}
+
+
+.languagenavitem:hover::before {
+    width: 60%;
+}
+
+
+.languageswrapper {
+    position: absolute;
+    height: calc(16.8px * 6 + 5 * 10px);
+    width: 100%;
+}
+
+.fornavitemhover:hover + .languagecontainer, .languagecontainer:hover {
+    height: calc(1vw * 150/19.2);
+    opacity: 100%;
+    
+}
+
+
+@media (max-width:1920px) {
+    .buyyourarticket {
+        font-size: 18px;
+        padding: calc(82px/10) 16px calc(82px/10);
+    }
+
+    .right {
+        right: 21.2px;
+    }
+
+    .left {
+        left: 21.8px;
+    }
+
+    .fornavitemhover:hover + .languagecontainer, .languagecontainer:hover {
+        height: calc(150px);}
+
+    .artickethover:hover > .animwrapper> .forwaveanim 
+    {
+        top: -30px;
+        transition: top 0.55s ease;
+    }
+
+    .langbeta {
+        top: 12px;
+    }
+
+    .wrapnavitem:hover::before, .langbetatext:hover::before {
+        height: 1px;
+    }
+
+    .wavewater {
+        min-height: 40.8px;
+    }
+
+    .triangleleft {
+        border-left: 40px solid transparent;
+        border-right: 66px solid transparent;
+    }
+
+    .triangleright {
+        border-right: 40px solid transparent;
+        border-left: 66px solid transparent;
+    }
+
+    .triangle {
+        border-bottom: 30px solid #e63338;
+    }
+    
+
+    .wrapnavitem {
+        
+        margin-right: 45px;
+        padding-top: 6px;
+        padding-top: 3px;
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .icon {
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid #e63338;
+    }
+}
+
+@media (max-width:1130px) {
+    .wrapnavitem {
+        margin-right: 20px;
+    }
+}
