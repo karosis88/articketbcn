@@ -33,6 +33,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('ffamily/ProximaNova-Extrabld.eot');
+    src: local('ffamily/Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+        url('ffamily/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+        url('ffamily/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('ffamily/ProximaNova-Extrabld.woff') format('woff'),
+        url('ffamily/ProximaNova-Extrabld.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -117,13 +130,61 @@ html {
 
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10.9199999999% 0 0;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+
+
+.icons > icon {
+    display: flex;
+    align-items: center;
+}
+
+icon > img {
+    height: 50px;
+}
+
+.icontext {
+    font-size: 15px;
+    padding-left: 20px;
+    font-family: 'Proxima Nova Rg';
+    line-height: 1.8;
+}
+
+
 .header {
+    
     position: fixed;
     width: 100%;
     padding: 20px 2%;
     box-sizing: border-box;
+    z-index: 100;
+    background-color: #fef8f2;
+    transition: padding .5s;
 }
 
+.icons > .iconfirst {
+    padding-left: 0px;
+
+}
+
+.firstsectionitems {
+    display: flex;
+}
+
+.firstsectionleft { 
+    width: 46.91957605985037vw;
+}
+
+.sitecont {
+    position: relative;
+    height: 100%;
+}
 
 
 .logoimg {
@@ -133,9 +194,30 @@ html {
     min-height: calc(6014px / 100);
 }
 
-.section1 {
-    display: none;
-    padding-top: calc(2.2vw * 5.052023121387283);
+.secondbody {
+    position: relative;
+    padding: calc(1vw * 11.125) 8% calc(1vw * 3.125) 0;
+}
+
+.headermini {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.secondheadermini {
+    padding-top: calc(1vw * 0.5208333333333333);
+    padding-bottom: calc(1vw * 0.5208333333333333);
+}
+
+.maintitle {
+    
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    font-size: 4.583333304vw;
+    letter-spacing: 1.249999992vw;
+    line-height: 1.15;
+    margin-bottom: 7.5%;
+
 }
 
 .sidebar {
@@ -147,8 +229,8 @@ html {
     transform: rotate(-180deg);
     writing-mode: vertical-lr; /* Вертикальный режим */
     text-orientation: mixed;
-    height: 372.44px;
-    width: 17.6px;
+    height: auto;
+    width: 18px;
 }
 
 
@@ -279,6 +361,18 @@ html {
     margin-bottom: 7.5%;
 }
 
+.bigbtn {
+    width: 100%;
+}
+
+.mainbtn {
+    padding: 2.8% 4%;
+}
+
+.btnwrapper {
+    
+} 
+
 .wrapnavitem:hover::before, .langbetatext:hover::before {
     content: '';
     width: 100%;
@@ -307,7 +401,7 @@ html {
 
 .right {
     top: 21vh;
-    right: 21.5px;
+    right: 21px;
 }
 
 
@@ -332,15 +426,23 @@ html {
 @media (max-width:1920px) {
     .buyyourarticket {
         font-size: 18px;
-        padding: calc(82px/10) 16px calc(82px/10);
+        padding: calc(90px/10) 16px calc(80px/10);
+    }
+
+    .secondbody {
+        padding: 178px 8% 50px;
     }
 
     .right {
-        right: 21.2px;
+        right: 20.5156249px;
     }
 
     .left {
-        left: 21.8px;
+        left: 21.3px;
+    }
+
+    .sidebar {
+        font-size: 13px;
     }
 
     .fornavitemhover:hover + .languagecontainer, .languagecontainer:hover {
@@ -393,6 +495,16 @@ html {
         border-right: 7px solid transparent;
         border-top: 10px solid #e63338;
     }
+}
+
+@media (min-width:1440px) {
+    .icontext {
+        font-size: 1.0416666667vw;
+    }
+}
+
+@media (max-width:1330px) {
+
 }
 
 @media (max-width:1130px) {
