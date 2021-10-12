@@ -74,7 +74,7 @@ a {
 
 .bigbtntext {
     font-family: 'Proxima Nova RgBold';
-    font-size: 27px;
+    font-size: 1.40625vw;
     color: #e63338;
     letter-spacing: 3.6px;
 }
@@ -99,8 +99,8 @@ html {
 
 .saletext {
     font-family: 'Proxima Nova Rg';
-    font-size: 19px;
-    height: 27px;
+    font-size: 0.9895833333333333vw;
+    height: 1.40625vw;
 }
 
 .saletextsizes {
@@ -145,10 +145,19 @@ html {
 .symbsize {
 }
 
+.bigbtnsizes {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
 .articketcost {
     font-family: 'Proxima Nova RgBold';
-    font-size: 30px;
-    letter-spacing: 4px;
+    font-size: 1.5625vw;
+    letter-spacing: 0.2083333333333333vw;
 }
 
 .mainbody {
@@ -224,7 +233,8 @@ html {
 }
 
 icon > img {
-    height: 50px;
+    height: 2.604166666666667vw;
+    min-height: 50px;
 }
 
 .icontext {
@@ -382,6 +392,7 @@ icon > img {
 .wavewater {
     width: 100%;
     height: calc(1vw * 2125/1000);
+    height: 50%;
     background-color: #e63338;
 }
 
@@ -418,11 +429,16 @@ icon > img {
     border-left: calc(3.4375 * 1vw) solid transparent;
 }
 
+.bigtriangle {
+    width: 50%;
+}
+
 
 /* .animwrapper:hover > .forwaveanim */
-.artickethover:hover > .animwrapper> .forwaveanim 
+.artickethover:hover > .animwrapper> .forwaveanim, .bigbtnsizes:hover > .forwaveanim 
 {
     top: calc(-1vw * 1.5625);
+    top: 50%;
     transition: top 0.55s ease;
 }
 
@@ -458,6 +474,7 @@ icon > img {
 }
 
 .mainbtn {
+    position: relative;
     padding: 3.1001% 3.95%;
     border: 2px solid #e63338;
 }
@@ -503,9 +520,9 @@ icon > img {
     left: 99%;
     top: 189%;
     position: absolute;
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
-    border-top: 18px solid #e63338;
+    border-left: 0.6770833333333333vw solid transparent;
+    border-right: 0.6770833333333333vw solid transparent;
+    border-top: 0.9375vw solid #e63338;
     cursor: pointer;
 }
 
@@ -522,8 +539,7 @@ icon > img {
 
 .fornavitemhover:hover + .languagecontainer, .languagecontainer:hover {
     height: calc(1vw * 150/19.2);
-    opacity: 100%;
-    
+    opacity: 100%;  
 }
 
 
@@ -531,6 +547,26 @@ icon > img {
     .buyyourarticket {
         font-size: 18px;
         padding: calc(90px/10) 16px calc(80px/10);
+    }
+
+    .sale::before{
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 18px solid #e63338;
+    }
+
+    .articketcost {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+
+    .saletext {
+        font-size: 19px;
+        height: 27px;
+    }
+
+    .bigbtntext {
+        font-size: 27px;
     }
 
     .secondbody {
@@ -568,6 +604,20 @@ icon > img {
 
     .wavewater {
         min-height: 40.8px;
+    }
+
+    .bigbtntriangleleft {
+        border-left: 4.347826086956522vw solid transparent;
+        border-right: 7.826086956521739vw solid transparent;
+        border-bottom: 20px solid #e63338;
+
+    }
+
+    .bigbtntriangleright {
+        border-right: 4.347826086956522vw solid transparent;
+        border-left: 7.826086956521739vw solid transparent;
+        border-bottom: 20px solid #e63338;
+
     }
 
     .triangleleft {
