@@ -22,6 +22,18 @@
 }
 
 @font-face {
+    font-family: 'Proxima Nova RgBold';
+    src: url('ffamily/ProximaNova-Bold.eot');
+    src: url('ffamily/Proxima Nova Bold'), url('ffamily/ProximaNova-Bold'),
+        url('ffamily/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ffamily/ProximaNova-Bold.woff2') format('woff2'),
+        url('ffamily/ProximaNova-Bold.woff') format('woff'),
+        url('ffamily/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Proxima Nova Semibold';
     src: url('ffamily/ProximaNova-Semibold.eot');
     src: url('ffamily/Proxima Nova Semibold'), url('ProximaNova-Semibold'),
@@ -45,6 +57,9 @@
     font-style: normal;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 * {
     padding: 0;
@@ -54,9 +69,18 @@
 a {
     text-decoration: none;
     color: black;
+    /* cursor: url("minicursor.svg") 23 26, auto; */
+}
+
+.bigbtntext {
+    font-family: 'Proxima Nova RgBold';
+    font-size: 27px;
+    color: #e63338;
+    letter-spacing: 3.6px;
 }
 
 html, body {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     font-size: 2%;
@@ -65,6 +89,7 @@ html, body {
 }
 
 html {
+    max-width: 100%;
 }
 
 
@@ -72,6 +97,59 @@ html {
     display: flex;
 }
 
+.saletext {
+    font-family: 'Proxima Nova Rg';
+    font-size: 19px;
+    height: 27px;
+}
+
+.saletextsizes {
+    height:  80%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sale {
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+}
+
+.costandtext {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.salesymbol {
+    display: flex;
+    align-items: center;
+    margin: 0px 25px 0px 24px;
+}
+
+.redcost {
+    position: relative;
+    color: #e63338;
+}
+
+.redcost::before {
+    content: '';
+    position:absolute;
+    height: 3px;
+    width: 70.2px;
+    top: 45%;
+    background-color: red;
+}
+
+.symbsize {
+}
+
+.articketcost {
+    font-family: 'Proxima Nova RgBold';
+    font-size: 30px;
+    letter-spacing: 4px;
+}
 
 .mainbody {
     width: 95%;
@@ -135,7 +213,7 @@ html {
     justify-content: space-between;
     padding: 0 10.9199999999% 0 0;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 9.8%;
 }
 
 
@@ -173,6 +251,18 @@ icon > img {
 
 }
 
+.mainpicture {
+    width: 109.3%;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    left: -1.2%;
+}
+
+.mainimgdiv {
+    flex: 1;
+}
+
 .firstsectionitems {
     display: flex;
 }
@@ -196,7 +286,8 @@ icon > img {
 
 .secondbody {
     position: relative;
-    padding: calc(1vw * 11.125) 8% calc(1vw * 3.125) 0;
+    padding: calc(1vw * 11.125) 0% calc(1vw * 3.125) 0;
+    padding-left: 8%;
 }
 
 .headermini {
@@ -363,14 +454,16 @@ icon > img {
 
 .bigbtn {
     width: 100%;
+    text-align: center;
 }
 
 .mainbtn {
-    padding: 2.8% 4%;
+    padding: 3.1001% 3.95%;
+    border: 2px solid #e63338;
 }
 
-.btnwrapper {
-    
+.bigbtnwrapper {
+    display: flex;
 } 
 
 .wrapnavitem:hover::before, .langbetatext:hover::before {
@@ -404,6 +497,17 @@ icon > img {
     right: 21px;
 }
 
+.sale::before {
+    content: '';
+    top: 0;
+    left: 99%;
+    top: 189%;
+    position: absolute;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 18px solid #e63338;
+    cursor: pointer;
+}
 
 .languagenavitem:hover::before {
     width: 60%;
@@ -430,7 +534,7 @@ icon > img {
     }
 
     .secondbody {
-        padding: 178px 8% 50px;
+        padding: 178px 0% 50px 8%
     }
 
     .right {
