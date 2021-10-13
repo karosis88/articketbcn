@@ -57,6 +57,21 @@
     font-style: normal;
 }
 
+@keyframes triangleanim {
+    0% {
+        opacity: 100%;
+    }
+
+    20% {
+        opacity: 0%;
+    }
+
+    40% {
+        opacity: 100%;
+    }
+
+}
+
 html {
     overflow-x: hidden;
 }
@@ -77,6 +92,7 @@ a {
     font-size: 1.40625vw;
     color: #e63338;
     letter-spacing: 3.6px;
+    white-space: nowrap;
 }
 
 html, body {
@@ -114,6 +130,11 @@ html {
     position: relative;
     display: flex;
     margin-left: 5%;
+}
+
+.miniicons {
+    display: none;
+    margin-bottom: 9.8%;
 }
 
 .costandtext {
@@ -400,6 +421,70 @@ icon > img {
     transition: color 0.5s ease;
 }
 
+.burger {
+    position: relative;
+    top: 15px;
+    display: none;
+    margin-right: 4%;
+    height: 26px;
+}
+
+.line {
+    position: relative;
+    height: 4px;
+    width: 25px;
+    border-radius: 7px;
+    background-color: black;
+    transition: .2s;
+}
+
+.line::after, .line::before {
+    content: '';
+    height: 4px;
+    border-radius: 7px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    transition: .2s;
+}
+
+.line::before {
+    bottom: 8.5px;
+}
+
+.lineneighbour {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(-11px);
+    cursor: pointer;
+}
+
+.line::after {
+    top: 8.5px;
+    left: 0.3px;
+}
+
+.clickedburger {
+    background-color: transparent;
+    
+}
+
+.clickedburger::before {
+    transform-origin: right;
+    transform: rotate(-45deg);
+    transition: transform .2s;
+    
+}
+
+.clickedburger::after {
+    transform-origin: right;
+    transition: transform .2s;
+    transform: rotate(45deg)
+}
+
 .articketcontainer {
     position: relative;
     z-index: 2;
@@ -477,6 +562,8 @@ icon > img {
     position: relative;
     padding: 3.1001% 3.95%;
     border: 2px solid #e63338;
+    display: flex;
+    align-items: center;
 }
 
 .bigbtnwrapper {
@@ -514,16 +601,20 @@ icon > img {
     right: 21px;
 }
 
-.sale::before {
+.secondbody::before {
     content: '';
     top: 0;
-    left: 99%;
-    top: 189%;
+    left: 49.5vw;
+    top: 53.9vw;
     position: absolute;
     border-left: 0.6770833333333333vw solid transparent;
     border-right: 0.6770833333333333vw solid transparent;
     border-top: 0.9375vw solid #e63338;
     cursor: pointer;
+
+    animation: triangleanim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 .languagenavitem:hover::before {
@@ -543,10 +634,17 @@ icon > img {
 }
 
 
+
 @media (max-width:1920px) {
     .buyyourarticket {
         font-size: 18px;
         padding: calc(90px/10) 16px calc(80px/10);
+    }
+    
+    .secondbody::before {
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 18px solid #e63338
     }
 
     .sale::before{
@@ -655,10 +753,48 @@ icon > img {
     .icontext {
         font-size: 1.0416666667vw;
     }
+
+    .salesymbol {
+        margin: 0px 15px 0px 14px;
+    }
 }
 
-@media (max-width:1330px) {
+@media (max-width: 1398px) {
+    .bigbtntext{
+        font-size: 20px;
+        letter-spacing: .2px;
+    }
+}
 
+@media (max-width:1350px) {
+    .icons {
+        padding-right: 5.9199999999%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .icons{
+        padding: 0;
+    }
+}
+
+@media (max-width: 1132px) {
+    .icons {
+        display: none;
+    }
+
+    .miniicons {
+        display: block;
+    }
+
+    .miniicons > div > icon {
+        display: flex;
+    }
+
+    .iconfirst, .iconsecond {
+        padding-right: 20%;
+        padding-bottom: 5%;
+    }
 }
 
 @media (max-width:1130px) {
@@ -666,3 +802,21 @@ icon > img {
         margin-right: 20px;
     }
 }
+
+
+@media (max-width:1000px) {
+    .wrapnav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+
+
+
+
+
+

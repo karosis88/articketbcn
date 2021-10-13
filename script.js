@@ -1,6 +1,8 @@
 alert(window.innerWidth)
 const maintitle = document.querySelector(".maintitle");
 const header = document.querySelector(".header");
+const burger = document.querySelector(".lineneighbour");
+const line = document.querySelector(".line")
 mini = false
 function scrollign ()
 {
@@ -23,4 +25,9 @@ function scrollign ()
     }
 }
 
+function burgerClick () {
+    line.classList.toggle('clickedburger')
+}
+
 document.addEventListener('scroll', scrollign)
+burger.addEventListener('click', burgerClick)
