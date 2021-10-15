@@ -73,10 +73,13 @@
 }
 
 html {
+    -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
 }
 
 * {
+    box-sizing: border-box;
+    outline: 0;
     padding: 0;
     margin: 0;
 }
@@ -88,6 +91,7 @@ a {
 }
 
 .bigbtntext {
+    position: relative;
     font-family: 'Proxima Nova RgBold';
     font-size: 1.40625vw;
     color: #e63338;
@@ -258,11 +262,63 @@ icon > img {
     min-height: 50px;
 }
 
+.bigbtnbigdivs {
+    position: absolute;
+    height: 200%;
+    background-color: #e63338;
+    width: 100%;
+    top: 45%;
+}
+
+.asd {
+}
+
+
+.bigbtndivscontainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: top .5s;
+    top: 200%;
+}
+
+.bleft {
+    right: 40%;
+    transform: rotate(
+-226deg);
+}
+
+.bigbtnwave {
+    width: 100%;
+    height: 100%;
+    background-color: #e63338;
+}
+
+.bright {
+    left: 40%;
+    transform: rotate(
+226deg);
+}
+
+
+
+.bigbtnhover {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
 .icontext {
     font-size: 15px;
     padding-left: 20px;
     font-family: 'Proxima Nova Rg';
     line-height: 1.8;
+}
+
+.forbigbtnhover {
+    width: 100%; height: 100%;
 }
 
 
@@ -384,14 +440,21 @@ icon > img {
     border-top: calc(1vw * 10/19.2) solid #e63338;
 }
 
-.forwaveanim {
+
+
+.forwaveanim, .bigforwaveanim {
     position: absolute;
-    height: auto;
+    height: 150%;
     width: 100%;
     min-width: 212.6px;
     left: 0;
     top: 100%;
     transition: 0.5s ease;
+}
+
+.bigforwaveanim {
+    width: calc(100% + 4px);
+    transform: translateX(-2px);
 }
 
 .triangles {
@@ -400,20 +463,32 @@ icon > img {
     width: 100%;
 }
 
+
+
+
+.bigtriangle {
+    width: 0;
+    height: 0;
+    /* border-left: calc(11.07287870900573 * 1vw / 4) solid transparent;
+    border-right: calc(11.07287870900573 * 1vw / 4) solid transparent; */
+    border-bottom: calc(1vw * 1.5625) solid #e63338;
+}
+
 .triangle {
     width: 0;
     height: 0;
-    border-left: calc(11.07287870900573 * 1vw / 4) solid transparent;
-    border-right: calc(11.07287870900573 * 1vw / 4) solid transparent;
+    /* border-left: calc(11.07287870900573 * 1vw / 4) solid transparent;
+    border-right: calc(11.07287870900573 * 1vw / 4) solid transparent; */
     border-bottom: calc(1vw * 1.5625) solid #e63338;
     
 }
 
 
+
 .wavewater {
     width: 100%;
     height: calc(1vw * 2125/1000);
-    height: 50%;
+    height: 200%;
     background-color: #e63338;
 }
 
@@ -430,10 +505,11 @@ icon > img {
 }
 
 .line {
+    line-height: 0%;
     position: relative;
     height: 4px;
     width: 25px;
-    border-radius: 7px;
+    border-radius: 3px;
     background-color: black;
     transition: .2s;
 }
@@ -441,7 +517,7 @@ icon > img {
 .line::after, .line::before {
     content: '';
     height: 4px;
-    border-radius: 7px;
+    border-radius: 3px;
     width: 25px;
     background-color: black;
     position: absolute;
@@ -469,6 +545,8 @@ icon > img {
 
 .clickedburger {
     background-color: transparent;
+    position: relative;
+    right: 4px;
     
 }
 
@@ -504,6 +582,11 @@ icon > img {
 
 }
 
+.artickethover:hover > .bigbtntextdiv > .bigbtntext {
+    color: white;
+    transition: .5s;
+}
+
 .triangleright {
     border-left: calc(2083 / 1000 * 1vw) solid transparent;
     border-right: calc(3.4375 * 1vw) solid transparent;
@@ -514,13 +597,10 @@ icon > img {
     border-left: calc(3.4375 * 1vw) solid transparent;
 }
 
-.bigtriangle {
-    width: 50%;
-}
 
 
 /* .animwrapper:hover > .forwaveanim */
-.artickethover:hover > .animwrapper> .forwaveanim, .bigbtnsizes:hover > .forwaveanim 
+.artickethover:hover > .animwrapper> .forwaveanim
 {
     top: calc(-1vw * 1.5625);
     top: 50%;
@@ -564,6 +644,22 @@ icon > img {
     border: 2px solid #e63338;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.mainbtn:hover > .artickethover > .animwrapper > .redbigbutton {
+    left: 0;
+    bottom:0;
+}
+
+.redbigbutton {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    bottom:100%;
+    background: #e63338;
+    transition: .5s;
 }
 
 .bigbtnwrapper {
@@ -633,6 +729,18 @@ icon > img {
     opacity: 100%;  
 }
 
+.sectiontwotitle {
+    font-family: 'Proxima Nova Th';
+    font-size: 42px;
+    letter-spacing: 16px;
+    line-height: 1;
+    text-align: center;
+}
+
+.sectiontwo {
+    padding: 6% 18% 0% 8%;
+}
+
 
 
 @media (max-width:1920px) {
@@ -679,6 +787,7 @@ icon > img {
         left: 21.3px;
     }
 
+
     .sidebar {
         font-size: 13px;
     }
@@ -687,6 +796,12 @@ icon > img {
         height: calc(150px);}
 
     .artickethover:hover > .animwrapper> .forwaveanim 
+    {
+        top: -30px;
+        transition: top 0.55s ease;
+    }
+
+    .artickethover:hover > .animwrapper> .bigforwaveanim 
     {
         top: -30px;
         transition: top 0.55s ease;
@@ -705,16 +820,19 @@ icon > img {
     }
 
     .bigbtntriangleleft {
-        border-left: 4.347826086956522vw solid transparent;
-        border-right: 7.826086956521739vw solid transparent;
-        border-bottom: 20px solid #e63338;
+        --left: calc(20% + 0px);
+        --right: calc(80% + 0px);
+        height: 5px;
+        border-left: var(--left) solid transparent;
+        border-right: var(--right) solid transparent;
+        border-bottom: 30px solid #e63338;
 
     }
 
     .bigbtntriangleright {
-        border-right: 4.347826086956522vw solid transparent;
+        /* border-right: 4.347826086956522vw solid transparent;
         border-left: 7.826086956521739vw solid transparent;
-        border-bottom: 20px solid #e63338;
+        border-bottom: 20px solid #e63338; */
 
     }
 
@@ -776,6 +894,10 @@ icon > img {
     .icons{
         padding: 0;
     }
+}
+
+@media (max-width: 1217px) {
+    .secondbody::before {display: none;}
 }
 
 @media (max-width: 1132px) {

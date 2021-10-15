@@ -3,8 +3,23 @@ const maintitle = document.querySelector(".maintitle");
 const header = document.querySelector(".header");
 const burger = document.querySelector(".lineneighbour");
 const line = document.querySelector(".line")
+const artickhover = document.querySelector(".animwrapper")
+
+const bleft = document.querySelector(".bigtriangleleft")
+const bright = document.querySelector(".bigtriangleright")
 mini = false
-function scrollign ()
+
+// function bigbtnbordersizes(e) {
+//     alert(1)
+//     var el = document.querySelector(".bigforwaveanim");
+//     var w = '' + el.offsetWidth ;
+//     bleft.style.cssText += "border-left:" + w*2/12 +  "px solid transparent;";
+//     bleft.style.cssText += "border-right:" + w*4/12 +  "px solid transparent;";
+//     bright.style.cssText += "border-left:" + w*4/12 +  "px solid transparent;";
+//     bright.style.cssText += "border-right:" + w*2/12 +  "px solid transparent;";
+//     }
+    
+    function scrollign ()
 {
     let screenpos = maintitle.getBoundingClientRect()
     console.log(screenpos.top)
@@ -31,3 +46,4 @@ function burgerClick () {
 
 document.addEventListener('scroll', scrollign)
 burger.addEventListener('click', burgerClick)
+artickhover.addEventListener("mouseover", bigbtnbordersizes(e));
