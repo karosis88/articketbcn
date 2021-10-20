@@ -4,7 +4,7 @@ const header = document.querySelector(".header");
 const burger = document.querySelector(".lineneighbour");
 const line = document.querySelector(".line")
 const artickhover = document.querySelector(".animwrapper")
-
+const faqimage = document.querySelector('.faqimages > img')
 const bleft = document.querySelector(".bigtriangleleft")
 const bright = document.querySelector(".bigtriangleright")
 mini = false
@@ -21,8 +21,9 @@ mini = false
     
     function scrollign ()
 {
+    // first event
     let screenpos = maintitle.getBoundingClientRect()
-    console.log(screenpos.top)
+    // console.log(screenpos.top)
     if (screenpos.top < 80) {
         if (!mini) {
             mini = true
@@ -38,6 +39,16 @@ mini = false
             else {header.classList.toggle('secondheadermini')}
         }
     }
+
+    // console.log('vbb' + ((659.8/19.7)* window.innerWidth/100))
+    // console.log('top' + faqimage.getBoundingClientRect().top) 
+    // console.log(faqimage.getBoundingClientRect().bottom - ( (659.8/19.7)* window.innerWidth/100))
+
+    // // second event
+    // if (faqimage.getBoundingClientRect().top == faqimage.getBoundingClientRect().bottom) {
+    //     alert("yes")
+    //     console.log('yesssss')
+    // }
 }
 
 function burgerClick () {

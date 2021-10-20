@@ -71,8 +71,8 @@
     }
 
 }
-
 html {
+    min-width: 350px;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
 }
@@ -100,6 +100,7 @@ a {
 }
 
 html, body {
+    overflow-x: hidden;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -165,9 +166,6 @@ html {
     width: 70.2px;
     top: 45%;
     background-color: red;
-}
-
-.symbsize {
 }
 
 .bigbtnsizes {
@@ -257,6 +255,14 @@ html {
     align-items: center;
 }
 
+
+.sectiontwoimgwrapper:hover > img {
+    transform: scale(1.25);
+    transition: transform .5s;
+    filter: invert(0%) sepia(0%) saturate(40%) hue-rotate(0deg) brightness(100%) contrast(120%);
+}
+
+
 icon > img {
     height: 2.604166666666667vw;
     min-height: 50px;
@@ -300,7 +306,9 @@ icon > img {
 226deg);
 }
 
-
+.mimgdiv {
+    width: calc(100% - 46.91957605985037vw);
+}
 
 .bigbtnhover {
     width: 100%;
@@ -355,12 +363,14 @@ icon > img {
 }
 
 .firstsectionleft { 
+    display: flex;
+    flex-direction: column;
     width: 46.91957605985037vw;
 }
 
 .sitecont {
     position: relative;
-    height: 100%;
+    height: auto;
 }
 
 
@@ -387,18 +397,17 @@ icon > img {
     padding-bottom: calc(1vw * 0.5208333333333333);
 }
 
-.maintitle {
-    
+.maintitle {  
     font-family: 'Proxima Nova Th';
     font-weight: 800;
     font-size: 4.583333304vw;
     letter-spacing: 1.249999992vw;
     line-height: 1.15;
     margin-bottom: 7.5%;
-
 }
 
 .sidebar {
+    white-space: nowrap;
     font-family: 'Proxima Nova Rg';
     position: fixed;
     font-size: calc(1vw * 0.8463541666666667);
@@ -512,6 +521,11 @@ icon > img {
     border-radius: 3px;
     background-color: black;
     transition: .2s;
+}
+
+.howitworkstext {
+    text-align: center;
+    margin-top: 12%;
 }
 
 .line::after, .line::before {
@@ -692,6 +706,8 @@ icon > img {
     left: 1.5vw;
 }
 
+
+
 .right {
     top: 21vh;
     right: 21px;
@@ -731,19 +747,201 @@ icon > img {
 
 .sectiontwotitle {
     font-family: 'Proxima Nova Th';
-    font-size: 42px;
-    letter-spacing: 16px;
+    font-size: calc(42vw/19.2);
+    letter-spacing: calc(16vw/19.2);
+    margin-bottom: calc(100vw/19.2);
     line-height: 1;
     text-align: center;
 }
 
 .sectiontwo {
-    padding: 6% 18% 0% 8%;
+    padding: 6% 8% 0% 0%;
 }
 
+.sectiontwoimgwrapper {
+    width: 100%;
+    height: 17.35955882352941vw;
+    overflow: hidden;
+    position: relative;
+}
 
+.sectiontwoline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectiontwoimgwrapper > img {
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+}
+
+.sectiontwotextsitemswrapper {
+    padding: 0 3%;
+}
+
+.sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib {
+    font-family: 'Proxima Nova Rg';
+    line-height: 1.5;
+    font-size: 1vw;
+
+}
+
+.faqtext > h4 {
+    font-family: 'Proxima Nova SemiBold';
+    font-size: 21px;
+    letter-spacing: 2.1px;
+    font-size: 1.09375vw;
+    letter-spacing: 0.109375vw;
+}
+
+.guidetitle {
+    font-family: 'Proxima Nova Th';
+    font-size: calc(27vw/19.2);
+    line-height: 1.5;
+    color: #dc3d43;
+}
+
+.guidnum {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+    font-size: calc(20vw/19.2);
+    margin-bottom: 6%;
+}
+
+.howitworksguide {
+    display: flex;
+    justify-content: space-between;
+}
+
+.guidewrapper {
+    width: 25%;
+}
+
+.guideimage > img + img {
+    width: 10%;
+    margin-left: 14%;
+}
+
+.guideimage {
+    display: flex;
+    margin-bottom: 6%;
+    height: 5vw;
+}
+
+.sectiontwoitem > .sectiontwotextsitemswrapper > h3 {
+    font-family: 'Proxima Nova Th';
+    letter-spacing: calc(4vw/19.2);
+    color: #dc3d43;
+    line-height: 1.5;
+    font-size: calc(24vw/19.2);
+    margin: 4% 0;
+    margin-top: 6%;
+}
+
+.faqimages > img {
+    width: calc(659.8vw/19.7);
+}
+
+.faqimages {
+    margin-top: 10%;
+    display: flex;
+    width: calc(4 * 659.8vw/19.7 + 20vw);
+    justify-content: space-between;
+}
+
+.sectionthreedescrib {
+    margin: 3% 0;
+}
+
+.sectiontwoitem {
+    width: 31%;
+    overflow: hidden;
+    margin-bottom: 8%;
+}
+
+.lastsectiontwoline {
+    display: none;
+}
+
+.changeleft {
+    left: -100%;
+   
+}
+
+.mainbtntwo {
+    padding: 2%;
+    display: inline-block;
+}
+
+.sectionthreetitle {  
+    font-family: 'Proxima Nova Th';
+    font-size: 3.4375vw;
+    letter-spacing: 0.72916vw;
+    line-height: 1.15;
+}
+
+.faqtext {
+    display: flex;
+}
+
+.faqtext > img {
+    margin-left: 1%;
+}
+
+.faqtext {
+    margin-top: 3%;
+}
+
+.mainbtn3 {
+    font-family: 'Proxima Nova Th';
+    font-size: calc(27vw/19.2);
+    letter-spacing: calc(3.6vw/19.2);
+}
+
+.mainbtn3container {
+    padding: calc(19vw/19.2) calc(40vw/19.2);
+}
 
 @media (max-width:1920px) {
+    .sectionthreetitle{
+        font-size: 66px;
+        letter-spacing: 14px;
+    }
+
+    .guidetitle {
+        font-size: 27px;
+    }
+
+    .guidnum {
+        font-size: 20px;
+    }
+
+    .sectiontwotitle {
+        font-size: 42px;
+        letter-spacing: 16px;
+    }
+
+    .faqtext > h4 {
+        font-size: 21px;
+        letter-spacing: 2.1px;
+    }
+
+    .sectiontwoitem > .sectiontwotextsitemswrapper > h3 {
+        letter-spacing: 4px;
+        font-size: 24px;
+    }
+
+    .scetiontwotitle {
+        font-size: 42px;
+        letter-spacing: 16px;
+        margin-bottom: 100px;
+    }
+
+    .sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib {
+        font-size: 19px; 
+    }
+
     .buyyourarticket {
         font-size: 18px;
         padding: calc(90px/10) 16px calc(80px/10);
@@ -865,6 +1063,15 @@ icon > img {
         border-right: 7px solid transparent;
         border-top: 10px solid #e63338;
     }
+
+    .mainbtn3container {
+        padding: 19px 40px;
+    }
+
+    .mainbtn3 {
+        font-size: 27px;
+        letter-spacing: 3.6px;
+    }
 }
 
 @media (min-width:1440px) {
@@ -935,6 +1142,127 @@ icon > img {
         display: block;
     }
 }
+
+@media (max-width: 900px) {
+    .lastitem {
+        display: none;
+    }
+
+    .sectiontwoitem {
+        width: 45%;
+    }
+
+    .sectiontwoimgwrapper {
+        height: 22vw;
+    }
+
+    .lastsectiontwoline {
+        display: flex;
+    }
+}
+
+
+
+@media (max-width: 660px) {
+
+    .mimgdiv {
+        margin-left: 20%;
+    }
+
+    .sectiontwoline {
+        display: block;
+    }
+
+    .sectiontwoitem {
+        width: 100%;
+    }
+
+    .sectiontwoimgwrapper {
+        height: auto;
+    }
+
+    .sectiontwoitem {
+        margin-bottom: 12%;
+    }
+
+    .firstsectionleft {
+        align-items: center;
+    }
+
+    .firstsectionitems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maintitle {
+        text-align: center;
+    }
+
+    .mainbtn {
+        display: none;
+    }
+
+    .maintitle {
+        width: 100vw;
+        font-size: 9vw;
+    }
+
+    .miniicons {
+        width: 67vw;
+    }
+
+    .miniicons > div {
+        justify-content: space-between;
+    }
+
+    .secondbody {
+        padding-top: 120px;
+    }
+
+    .salesymbol {
+        margin: 0 18px;
+    }
+
+    .mimgdiv {
+        width: 85vw;
+        min-width: 320px;
+    }
+
+    .left {
+        left: 5px;
+    }
+
+    .right {
+        right: 5px;
+    }
+
+    .secondbody {
+        padding-left: 0px;
+        padding: 120px 22px;
+        overflow: hidden;
+    }
+
+    .bigbtn {
+        width: auto;
+    }
+
+    .iconfirst, .iconsecond {
+        padding-right: 5%;
+    
+}
+
+@media screen and (max-width: 400px) {
+    .maintitle {
+        font-size: 35px;
+    }
+
+    .miniicons {
+        width: 60vw;
+        min-width: 210px;
+    }
+}
+
 
 
 
