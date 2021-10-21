@@ -617,7 +617,6 @@ icon > img {
 .artickethover:hover > .animwrapper> .forwaveanim
 {
     top: calc(-1vw * 1.5625);
-    top: 50%;
     transition: top 0.55s ease;
 }
 
@@ -900,7 +899,25 @@ icon > img {
 }
 
 .mainbtn3container {
+    margin-top: 8%;
     padding: calc(19vw/19.2) calc(40vw/19.2);
+}
+
+.m3left {
+    border-left: calc(75vw/19.2) solid transparent;
+    border-right: calc(133.525vw/19.2) solid transparent;
+    border-bottom: calc(50vw/19.2) solid #e63338;
+}
+
+.m3right {
+    border-right: calc(75vw/19.2) solid transparent;
+    border-left: calc(133.525vw/19.2) solid transparent;
+    border-bottom: calc(50vw/19.2) solid #e63338;
+}
+
+.mainbtn3container > .artickethover:hover > .animwrapper> .forwaveanim {
+    top: calc(-1vw * 2.6);
+    transition: top 0.55s ease;
 }
 
 @media (max-width:1920px) {
@@ -1071,6 +1088,23 @@ icon > img {
     .mainbtn3 {
         font-size: 27px;
         letter-spacing: 3.6px;
+    }
+
+    .m3left {
+        border-right: 75px solid transparent;
+        border-left: 133.525px solid transparent;
+        border-bottom: 50px solid #e63338;
+    }
+
+    .m3right {
+        border-left: 75px solid transparent;
+        border-right: 133.525px solid transparent;
+        border-bottom: 50px solid #e63338;
+    }
+
+    .mainbtn3container > .artickethover:hover > .animwrapper> .forwaveanim {
+        top: -60px;
+        transition: top 0.55s ease;
     }
 }
 
@@ -1249,7 +1283,7 @@ icon > img {
 
     .iconfirst, .iconsecond {
         padding-right: 5%;
-    
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1262,7 +1296,6 @@ icon > img {
         min-width: 210px;
     }
 }
-
 
 
 

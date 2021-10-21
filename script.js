@@ -57,4 +57,3 @@ function burgerClick () {
 
 document.addEventListener('scroll', scrollign)
 burger.addEventListener('click', burgerClick)
-artickhover.addEventListener("mouseover", bigbtnbordersizes(e));
