@@ -72,9 +72,8 @@
 
 }
 html {
-    min-width: 350px;
+    /* min-width: 350px; */
     -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
 }
 
 * {
@@ -86,7 +85,6 @@ html {
 
 a {
     text-decoration: none;
-    color: black;
     /* cursor: url("minicursor.svg") 23 26, auto; */
 }
 
@@ -100,7 +98,7 @@ a {
 }
 
 html, body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -111,6 +109,7 @@ html, body {
 
 html {
     max-width: 100%;
+    min-width: 250px;
 }
 
 
@@ -137,6 +136,10 @@ html {
     margin-left: 5%;
 }
 
+.howitworksguide {
+    flex-wrap: wrap;
+}
+
 .miniicons {
     display: none;
     margin-bottom: 9.8%;
@@ -153,6 +156,61 @@ html {
     align-items: center;
     margin: 0px 25px 0px 24px;
 }
+
+.fa {
+    font-size: calc(20vw/19.2);
+}
+
+.allsocialitems {
+    display: flex;
+}
+
+.itemgroupwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footertext {
+    white-space: nowrap;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.socialtexts {
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.itemgroupwrapper > div > img {
+    margin-bottom: 20%;
+}
+
+.footersectext {
+    font-size: calc(14vw/19.2);
+    opacity: .8;
+}
+
+.paymethodicons {
+    margin-top: 15%;
+}
+
+.footerwrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4.2% 4.8% 4%;
+    display: flex;
+    width: 100vw;
+    left: -8%;
+    min-width: 250px;
+    position: relative;
+    color: white;
+    background-color: #e63338;
+    font-family: 'Proxima Nova Rg';
+    font-size: calc(16vw/19.2);
+}
+
 
 .redcost {
     position: relative;
@@ -177,6 +235,10 @@ html {
     position: absolute;
 }
 
+a {
+    color: black;
+}
+
 .articketcost {
     font-family: 'Proxima Nova RgBold';
     font-size: 1.5625vw;
@@ -199,6 +261,11 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.articketcontainer {
+    display: flex;
+    align-items: center;
 }
 
 .leftbar {
@@ -262,12 +329,6 @@ html {
     filter: invert(0%) sepia(0%) saturate(40%) hue-rotate(0deg) brightness(100%) contrast(120%);
 }
 
-
-icon > img {
-    height: 2.604166666666667vw;
-    min-height: 50px;
-}
-
 .bigbtnbigdivs {
     position: absolute;
     height: 200%;
@@ -315,8 +376,9 @@ icon > img {
     height: 100%;
 }
 
-
-
+.socialwrapper {
+    margin: 0 .6vw;
+}
 
 .icontext {
     font-size: 15px;
@@ -383,7 +445,7 @@ icon > img {
 
 .secondbody {
     position: relative;
-    padding: calc(1vw * 11.125) 0% calc(1vw * 3.125) 0;
+    padding: calc(1vw * 11.125) 0% 0 8%;
     padding-left: 8%;
 }
 
@@ -554,7 +616,6 @@ icon > img {
 
 .line::after {
     top: 8.5px;
-    left: 0.3px;
 }
 
 .clickedburger {
@@ -660,9 +721,22 @@ icon > img {
     cursor: pointer;
 }
 
-.mainbtn:hover > .artickethover > .animwrapper > .redbigbutton {
+.mainbtn:hover > .artickethover > .animwrapper > .redbigbutton, .mainbtn4:hover > .artickethover > .animwrapper > .redbigbutton {
     left: 0;
     bottom:0;
+}
+
+.questions {
+    margin-top: 25%;
+    width: 92%;
+}
+
+.questiontexts {
+    margin-bottom: 14%;
+    width: 95%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
 }
 
 .redbigbutton {
@@ -757,6 +831,13 @@ icon > img {
     padding: 6% 8% 0% 0%;
 }
 
+.k100artickets {
+    white-space: nowrap;
+    font-family: 'Proxima Nova SemiBold';
+    font-size: calc(63vw/19.2);
+    letter-spacing: calc(5.5vw/19.2);
+}
+
 .sectiontwoimgwrapper {
     width: 100%;
     height: 17.35955882352941vw;
@@ -779,11 +860,16 @@ icon > img {
     padding: 0 3%;
 }
 
-.sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib {
+.sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib, .answer {
     font-family: 'Proxima Nova Rg';
     line-height: 1.5;
     font-size: 1vw;
+}
 
+.questionitems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .faqtext > h4 {
@@ -792,9 +878,15 @@ icon > img {
     letter-spacing: 2.1px;
     font-size: 1.09375vw;
     letter-spacing: 0.109375vw;
+    white-space: nowrap;
 }
 
-.guidetitle {
+.itemq {
+    flex-basis: 31%;
+    margin-bottom: 12%;
+}
+
+.guidetitle, .questionm {
     font-family: 'Proxima Nova Th';
     font-size: calc(27vw/19.2);
     line-height: 1.5;
@@ -811,10 +903,63 @@ icon > img {
 .howitworksguide {
     display: flex;
     justify-content: space-between;
+    width: 92%;
+}
+
+.articketsold {
+    margin-top: 12%;
+    height: 28.4vw;
+    width: 92%;
+    background-color: #e63338;
+}
+
+.buyartickettext {
+    white-space: nowrap;
+}
+
+.articketsoldbody {
+    width: 100%;
+    height: 100%;
+    top: 6%;
+    position: relative;
+    left: calc(6% / 3.25538862179);
+    background-color: #FEF8F2;
+    border: 2px solid #e63338;
+}
+
+.articketsoldtexts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.saveup {
+    font-family: 'Proxima Nova SemiBold';
+    font-size: calc(27vw/19.2);
+    letter-spacing: calc(1.38vw/19.2);
+}
+
+.articketsolditemswrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: space-between;
+}
+
+.articketsoldtexts > div > img {
+    width: 12vw;
+    position: relative;
+    right: 28%;
+}
+
+.divsoldimageandbtn {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .guidewrapper {
-    width: 25%;
+    flex-basis: 25%;
 }
 
 .guideimage > img + img {
@@ -838,14 +983,24 @@ icon > img {
     margin-top: 6%;
 }
 
-.faqimages > img {
-    width: calc(659.8vw/19.7);
+.fqimageswrapper > img {
+    width: 34.5vw;
 }
 
 .faqimages {
-    margin-top: 10%;
+    padding-top: 10vw;
+}
+
+.stickwrapper {
+    position: sticky;
+    top: 10vh;
+    overflow-x: hidden;
+
+}
+
+.fqimageswrapper {
     display: flex;
-    width: calc(4 * 659.8vw/19.7 + 20vw);
+    width: calc(34.5vw*4 + 160px);
     justify-content: space-between;
 }
 
@@ -898,6 +1053,16 @@ icon > img {
     letter-spacing: calc(3.6vw/19.2);
 }
 
+.socialwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(53vw/14.14);
+    height: calc(53vw/14.14);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
 .mainbtn3container {
     margin-top: 8%;
     padding: calc(19vw/19.2) calc(40vw/19.2);
@@ -920,13 +1085,75 @@ icon > img {
     transition: top 0.55s ease;
 }
 
+.getyours {
+    letter-spacing: calc(9vw/19.2);
+    color: #909090;
+}
+
+icon > img {
+    height: calc(50vw/19.2);
+}
+
+.artsoldt {
+    display: flex; margin-right: 3vw;
+}
+
+.bigger {
+    padding: calc(20vw/19.2) calc(40vw/19.2);    
+}
+
+@media (min-width: 1920px) {
+    .itemgroupwrapper > div >img {
+        width: 8vw;
+    }
+}
+
 @media (max-width:1920px) {
+    .footerwrapper {
+        font-size: 16px;
+    }
+
+    .bigger {
+        padding: 20px 40px;
+    }
+
+    icon > img {
+        height: 50px;
+    }
+
+    .footersectext {
+        font-size: 14px;
+    }
+
     .sectionthreetitle{
         font-size: 66px;
         letter-spacing: 14px;
     }
 
-    .guidetitle {
+    .k100artickets {
+        font-size: 63px;
+        letter-spacing: 5.5px;
+    }
+
+    .getyours {
+        letter-spacing: 9px;
+    }
+
+    .saveup {
+        font-size: 27px;
+        letter-spacing: 1.38px;
+    }
+
+    .socialwrapper {
+        height: 53px;
+        width: 53px;
+    }
+
+    .fa {
+        font-size: 20px;
+    }
+
+    .guidetitle, .questionm {
         font-size: 27px;
     }
 
@@ -955,7 +1182,7 @@ icon > img {
         margin-bottom: 100px;
     }
 
-    .sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib {
+    .sectiontwoitem > .sectiontwotextsitemswrapper > p, .sectionthreedescrib, .answer {
         font-size: 19px; 
     }
 
@@ -991,7 +1218,7 @@ icon > img {
     }
 
     .secondbody {
-        padding: 178px 0% 50px 8%
+        padding: 178px 0% 0px 8%
     }
 
     .right {
@@ -1108,6 +1335,36 @@ icon > img {
     }
 }
 
+@media (max-width: 1680px) {
+    .k100artickets {
+        font-size: 3.749999vw;
+        letter-spacing: .3273809vw;
+    }
+
+    .getyours {
+        font-size: 3.749999vw;
+        letter-spacing: .535714277vw;
+    }
+
+    .saveup {
+        font-size: 1.6071428857vw;
+        letter-spacing: .08214285685vw;
+    }
+
+    .btn4 {
+        font-size: 1.6071428857vw;
+        letter-spacing: .20238095142vw;
+    }
+
+    .mainbtn4 {
+        padding: 6% 8%;
+    }
+
+    .bigger {
+        padding: 20px 40px;    
+    }
+}
+
 @media (min-width:1440px) {
     .icontext {
         font-size: 1.0416666667vw;
@@ -1146,6 +1403,20 @@ icon > img {
         display: none;
     }
 
+    .sicons {
+        flex-basis: 100%;
+    }
+
+    .allsocialitems {
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+    .socialtexts {
+        margin-top: 3%;
+        align-items: center;
+    }
+
     .miniicons {
         display: block;
     }
@@ -1167,6 +1438,29 @@ icon > img {
 }
 
 
+
+@media (max-width: 1090px) {
+    .questionstitle {
+        font-size: 53px;
+        letter-spacing: 10px;
+    }
+
+    .faqimages {
+        height: auto;
+    }
+
+    .fqimageswrapper {
+        display: block;
+        width: auto;
+        transform: translateX(0px) !important;
+    }
+
+    .faqtext > h4 {
+        white-space: normal;
+    }
+}
+
+
 @media (max-width:1000px) {
     .wrapnav {
         display: none;
@@ -1174,6 +1468,10 @@ icon > img {
 
     .burger {
         display: block;
+    }
+
+    .itemq {
+        flex-basis: 41%;
     }
 }
 
@@ -1195,9 +1493,49 @@ icon > img {
     }
 }
 
-
-
 @media (max-width: 660px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .sidebar {
+        font-size: 8px;
+    }
+
+    .miniicons {
+        margin-top: 20%;
+    }
+
+    .mimgdiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mimgdiv > img {
+        width: 84vw;
+    }
+
+    .miniicons > div > icon {
+        align-items: center;
+    }
+
+    .icontext {
+        padding-left: 10px;
+        /* white-space: nowrap; */
+    }
+
+    .sectiontwo {
+        padding: 6% 0% 0% 0%;
+    }
+
+    icon > img {
+        width: 40px;
+        height: 45px;
+    }
+
+    .footerwrapper {
+        left: -22px;
+    }
 
     .mimgdiv {
         margin-left: 20%;
@@ -1264,17 +1602,17 @@ icon > img {
     }
 
     .left {
-        left: 5px;
+        left: -5px;
     }
 
     .right {
-        right: 5px;
+        right: 0px;
     }
 
     .secondbody {
         padding-left: 0px;
-        padding: 120px 22px;
-        overflow: hidden;
+        padding: 120px 22px 0px 22px;
+        /* overflow: hidden; */
     }
 
     .bigbtn {
@@ -1284,16 +1622,174 @@ icon > img {
     .iconfirst, .iconsecond {
         padding-right: 5%;
     }
+
+    .guidewrapper {
+        flex-basis: 100%;
+    }
+
+    .guideimage {
+        height: 60px;
+    }
+
+    .questiontexts {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 665px) {
+    .paymethodicons > img {
+        width: 140px;
+    }
+
+    .itemgroupwrapper > div > img {
+        width: 60%;
+
+    }
+
+    .larger {
+        font-size: 5vw;
+    }
+
+    .itemgroupwrapper {
+        flex-basis: 20%;
+    }
+
+    .sicons {
+        margin: 0 auto;
+        margin-top: 4%;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .paymethodicons > img {
+        width: 140px;
+    }
+
+    .itemgroupwrapper > div > img {
+        width: 60%;
+
+    }
+
+    .itemgroupwrapper {
+        flex-basis: 50%;
+        margin-bottom: 5%;
+    }
+
+    .sicons {
+        display: none;
+    }
+
+    .footerwrapper {
+        padding: 8% 10% 0%;
+    }
+
+    .paymethodicons {
+        margin-top: 3%;
+    }
+
+    .footertext {
+        white-space: normal;
+    }
+
+    .sectiontwo > .sectiontwotitle {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .itemq {
+        flex-basis: 100%;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .maintitle {
         font-size: 35px;
+        font-size: 9vw;
+    }
+
+    .bigger {
+        padding: 10px 20px;    
     }
 
     .miniicons {
-        width: 60vw;
+        width: 85vw;
         min-width: 210px;
+    }
+
+    .sectiontwo > .sectiontwotitle {
+        font-size: 20px;
+    }
+
+    .logoimg {
+        min-width: 140px;
+    }
+
+    icon > img {
+        width: 9vw;
+        height: 10vw;
+    }
+
+    .articketsoldtexts > div > img {
+        display: none;
+    }
+
+    .artsoldt {
+        flex-basis: 100%;
+    }
+
+    .divsoldimageandbtn {
+        display: block;
+    }
+
+    .btn4 {
+        font-size: 4vw;
+    }
+
+    .articketsold {
+        height: 60vw;
+    }
+
+    .k100artickets {
+        font-size: 7vw;
+        white-space: normal;
+    }
+
+    .saveup {
+        font-size: 3vw;
+    }
+
+    .artsoldt > .buyyourarticket {
+        padding: 6% 18%;
+    }
+    
+    .artsoldt {
+        justify-content: center;
+    }
+
+    .questiontexts > .questionstitle {
+        font-size: 8vw;
+    }
+
+    .miniicons > div {
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 280px) {
+    .larger {
+        font-size: 4vw;
+    }
+
+    .salesymbol {
+        margin: 0 9px;
+    }
+
+    .bigger {
+        padding: 10px 2vw;
     }
 }
 
