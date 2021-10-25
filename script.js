@@ -1,4 +1,3 @@
-alert(window.innerWidth)
 const maintitle = document.querySelector(".maintitle");
 const header = document.querySelector(".header");
 const burger = document.querySelector(".lineneighbour");
@@ -7,18 +6,11 @@ const artickhover = document.querySelector(".animwrapper")
 const faqimage = document.querySelector('.faqimages > img')
 const bleft = document.querySelector(".bigtriangleleft")
 const bright = document.querySelector(".bigtriangleright")
+const langitems = document.querySelector('.languagenavitem')
+const tl = document.getElementById("tl")
+const tr = document.getElementById("tr")
 mini = false
 
-// function bigbtnbordersizes(e) {
-//     alert(1)
-//     var el = document.querySelector(".bigforwaveanim");
-//     var w = '' + el.offsetWidth ;
-//     bleft.style.cssText += "border-left:" + w*2/12 +  "px solid transparent;";
-//     bleft.style.cssText += "border-right:" + w*4/12 +  "px solid transparent;";
-//     bright.style.cssText += "border-left:" + w*4/12 +  "px solid transparent;";
-//     bright.style.cssText += "border-right:" + w*2/12 +  "px solid transparent;";
-//     }
-    
     function scrollign ()
 {
     // first event
@@ -40,20 +32,21 @@ mini = false
         }
     }
 
-    // console.log('vbb' + ((659.8/19.7)* window.innerWidth/100))
-    // console.log('top' + faqimage.getBoundingClientRect().top) 
-    // console.log(faqimage.getBoundingClientRect().bottom - ( (659.8/19.7)* window.innerWidth/100))
-
-    // // second event
-    // if (faqimage.getBoundingClientRect().top == faqimage.getBoundingClientRect().bottom) {
-    //     alert("yes")
-    //     console.log('yesssss')
-    // }
 }
 
 function burgerClick () {
     line.classList.toggle('clickedburger')
+    document.querySelector('.secondbody').classList.toggle('dnone')
+    document.querySelector('.wrapnav').classList.toggle('clickedwrapnav')
+    langitems.classList.toggle('wrapnavitem')
+    tl.classList.toggle('realtriangleright')
+    tr.classList.toggle('realtriangleleft')
 }
+
+window.onresize = function(event) {
+    if (window.innerWidth > 1000) {langitems.classList.add('wrapnavitem')
+    document.querySelector('.secondbody').classList.remove('dnone')}
+};
 
 document.addEventListener('scroll', scrollign)
 burger.addEventListener('click', burgerClick)

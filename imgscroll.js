@@ -13,7 +13,6 @@ window.onscroll = function() {
     document.querySelector('.faqimages').style.height = (elementwidth-600) + 'px';
     var topdist = window.pageYOffset
 
-    // console.log('topdist')
  
     if (topdist >= distfromtop && topdist <= disttoscroll +100) {
         var transformpx = topdist-distfromtop
@@ -21,6 +20,10 @@ window.onscroll = function() {
         // alert(topdist)
         // alert(disttoscroll)
         // alert(document.querySelector('.faqimages').style.transform)
+    }
+    else {
+        document.querySelector('.faqimages').style.height = 'auto';
+        document.querySelector('.fqimageswrapper').style = "width: auto; justify-content: space-between"
     }
 }
 }

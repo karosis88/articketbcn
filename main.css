@@ -88,6 +88,10 @@ a {
     /* cursor: url("minicursor.svg") 23 26, auto; */
 }
 
+.socialwrapper {
+    color: white;
+}
+
 .bigbtntext {
     position: relative;
     font-family: 'Proxima Nova RgBold';
@@ -165,6 +169,10 @@ html {
     display: flex;
 }
 
+.wrapsocialitems {
+    display: none;
+}
+
 .itemgroupwrapper {
     display: flex;
     flex-direction: column;
@@ -181,6 +189,11 @@ html {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.nullline {
+    height: 0px !important;
+    margin: 0 !important;
 }
 
 .itemgroupwrapper > div > img {
@@ -500,6 +513,10 @@ a {
     display: flex;
 }
 
+.dmenuwrap {
+    display: none;
+}
+
 .icon {
     width: 0;
     height: 0;
@@ -626,16 +643,13 @@ a {
 }
 
 .clickedburger::before {
-    transform-origin: right;
-    transform: rotate(-45deg);
-    transition: transform .2s;
     
+    transform: rotate(45deg) translate(10px, 2px);
 }
 
 .clickedburger::after {
-    transform-origin: right;
-    transition: transform .2s;
-    transform: rotate(45deg)
+    transform: rotate(-45deg) translate(10px, -2px);
+    
 }
 
 .articketcontainer {
@@ -998,11 +1012,16 @@ a {
 
 }
 
+.dnone {
+    display: none;
+}
+
 .fqimageswrapper {
     display: flex;
     width: calc(34.5vw*4 + 160px);
     justify-content: space-between;
 }
+
 
 .sectionthreedescrib {
     margin: 3% 0;
@@ -1278,14 +1297,25 @@ icon > img {
 
     }
 
+    
     .triangleleft {
         border-left: 40px solid transparent;
         border-right: 66px solid transparent;
     }
-
+    
     .triangleright {
         border-right: 40px solid transparent;
         border-left: 66px solid transparent;
+    }
+    
+    .realtriangleleft {
+        border-right: 47.925px solid transparent;
+        border-left: 77px solid transparent;
+    }
+
+    .realtriangleright {
+        border-left: 47.925px solid transparent;
+        border-right: 77px solid transparent;
     }
 
     .triangle {
@@ -1473,6 +1503,70 @@ icon > img {
     .itemq {
         flex-basis: 41%;
     }
+
+    .dmsocial {
+        border-color: #e63338;
+    }
+
+    .clickedwrapnav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+        align-items: center;
+        transform: translateY(45%);
+    }
+
+    .dmsocialicon::before {
+        color: #e63338;
+    }
+    
+    .wrapnavitem {
+        margin: 1.4%;
+        font-size: 25px;
+    }
+
+    .headerbtntext {
+        font-size: 22px;
+    }
+
+    .dflex > .icon {
+        display: none;
+    }
+
+    .languagenavitem {
+        display: flex;
+    }
+
+    .languagecontainer {
+        display: none;
+    }
+
+    .fornavitemhover {
+        display: none;
+    }
+
+    .dmenuwrap {
+        display: flex;
+        transform: translateX(-35px);
+    }
+
+    .dmenuwrap > div {
+        padding-right: 5%;
+    }
+
+    .wrapnav > .buyyourarticket {
+        margin-top: 20px;
+    }
+
+    .wrapsocialitems {
+        display: flex;
+        position: fixed;
+        bottom: 40px;
+    }
+
 }
 
 @media (max-width: 900px) {
