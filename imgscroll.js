@@ -21,10 +21,11 @@ window.onscroll = function() {
         // alert(disttoscroll)
         // alert(document.querySelector('.faqimages').style.transform)
     }
-    else {
-        document.querySelector('.faqimages').style.height = 'auto';
-        document.querySelector('.fqimageswrapper').style = "width: auto; justify-content: space-between"
-    }
+    
+}
+else {
+    document.querySelector('.faqimages').style.height = 'auto';
+    document.querySelector('.fqimageswrapper').style = "width: auto; justify-content: space-between"
 }
 }
 
